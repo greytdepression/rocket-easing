@@ -27,3 +27,9 @@ However, cubic Béziers have a linear second derivative, i.e. linear acceleratio
 Note that these extreme accelartions are inherent to all Bézier curves independent of degree (if the degree is at least 3). We could choose e.g. a fifth-order Bézier curve and set start and end accelerations to 0, this however would then yield even stronger accelerations on (0, 1).
 
 In comparison, rocket easing uses constant accelerations which minimizes the maximum acceleration overall.
+
+Here is the path taken by the two interpolation methods:
+![Comparison of the paths taken by Bézier interpolation and rocket easing](https://github.com/greytdepression/rocket-easing/blob/main/graphs/bezier-rocket-path.png?raw=true)
+
+These are the accelerations experienced over time.
+![Comparison of the accelerations produced by Bézier and rocket easing interpolation](https://github.com/greytdepression/rocket-easing/blob/main/graphs/bezier-rocket-acceleration.png?raw=true)
