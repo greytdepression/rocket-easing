@@ -20,7 +20,7 @@ As such, this approach yields us a continuous ($C_0$) interpolation (given that 
 An easy and computationally efficent way of $C_1$ interpolating between to points is to use cubic Bézier curves. A cubic Bézier curve is parametrized by four points $p_0, p_1, p_2, p_3$ and of the form
 $$b(t) = (1-t)^3p_0 + 3t(1-t)^2p_1 + 3t^2(1-t)p_2 + t^3p_3.$$
 By choosing these points as follows
-$$p_0 = x_0, p_1 = \frac 13 (v_0 - 3x_0), p_2 = -\frac 13 (v_1 - 3x_1), p_3 = x_1,$$
+$$p_0 = x_0,\quad p_1 = \frac 13 (v_0 - 3x_0),\quad p_2 = -\frac 13 (v_1 - 3x_1),\quad p_3 = x_1,$$
 we get a cubic Bézier curve that smoothly (i.e. $C_\infty$) interpolates between $x_0$ and $x_1$ while respecting start and end velocities $v_0$ and $v_1$.
 
 However, cubic Béziers have a linear second derivative, i.e. linear acceleration, thus we will typically start and end with extrme acceleartions and have zero acceleration somewhere in the middle.
